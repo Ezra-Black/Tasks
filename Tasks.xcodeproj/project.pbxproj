@@ -16,6 +16,7 @@
 		83FE344C239759F2000D441F /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE344B239759F2000D441F /* TaskDetailViewController.swift */; };
 		83FE344F23975C33000D441F /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83FE344D23975C33000D441F /* Tasks.xcdatamodeld */; };
 		83FE345123976081000D441F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE345023976081000D441F /* CoreDataStack.swift */; };
+		83FE345323976A59000D441F /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE345223976A59000D441F /* Task+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		83FE344B239759F2000D441F /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		83FE344E23975C33000D441F /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		83FE345023976081000D441F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		83FE345223976A59000D441F /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				83FE344D23975C33000D441F /* Tasks.xcdatamodeld */,
 				83FE344823975986000D441F /* ViewControllers */,
 				83FE345023976081000D441F /* CoreDataStack.swift */,
+				83FE345223976A59000D441F /* Task+Convenience.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				83FE344A239759DF000D441F /* TaskTableViewController.swift in Sources */,
 				83FE34352397555B000D441F /* AppDelegate.swift in Sources */,
 				83FE344F23975C33000D441F /* Tasks.xcdatamodeld in Sources */,
+				83FE345323976A59000D441F /* Task+Convenience.swift in Sources */,
 				83FE345123976081000D441F /* CoreDataStack.swift in Sources */,
 				83FE344C239759F2000D441F /* TaskDetailViewController.swift in Sources */,
 				83FE34372397555B000D441F /* SceneDelegate.swift in Sources */,
