@@ -32,6 +32,8 @@ class TaskTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+    
 
     // MARK: - Table view data source
 
@@ -51,7 +53,31 @@ class TaskTableViewController: UITableViewController {
     
     //MARK: Actions
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let task = tasks[indexPath.row]
+            let moc = CoreDataStack.shared.mainContext
+            moc.delete(task)
+            do {
+                try moc.save()
+                tableView.reloadData()
+            } catch {
+                moc.reset()
+                print("Error saving MOC object context: \(error)")
+            }
+        }
+    }
     
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailVC" {
+            let detailVC = segue.destination as! TaskDetailViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                detailVC.task = tasks[indexPath.row]
+            }
+        }
+    }
     
 
 }
