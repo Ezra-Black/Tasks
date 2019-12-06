@@ -32,6 +32,7 @@
 		83FE344E23975C33000D441F /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		83FE345023976081000D441F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		83FE345223976A59000D441F /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
+		83FE34562399FC15000D441F /* Tasks 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +384,7 @@
 		83FE344D23975C33000D441F /* Tasks.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				83FE34562399FC15000D441F /* Tasks 2.xcdatamodel */,
 				83FE344E23975C33000D441F /* Tasks.xcdatamodel */,
 			);
 			currentVersion = 83FE344E23975C33000D441F /* Tasks.xcdatamodel */;
