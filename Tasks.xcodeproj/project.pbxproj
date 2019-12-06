@@ -387,7 +387,7 @@
 				83FE34562399FC15000D441F /* Tasks 2.xcdatamodel */,
 				83FE344E23975C33000D441F /* Tasks.xcdatamodel */,
 			);
-			currentVersion = 83FE344E23975C33000D441F /* Tasks.xcdatamodel */;
+			currentVersion = 83FE34562399FC15000D441F /* Tasks 2.xcdatamodel */;
 			path = Tasks.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

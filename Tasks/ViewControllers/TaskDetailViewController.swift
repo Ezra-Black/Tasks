@@ -14,6 +14,7 @@ class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var priorityControl: UISegmentedControl!
     
     var task: Task? {
         didSet {
@@ -32,23 +33,27 @@ class TaskDetailViewController: UIViewController {
     @IBAction func saveTask(_ sender: UIBarButtonItem) {
         guard let name = nameTextField.text,
                  !name.isEmpty else {return}
+        //makes an index, puts that indexed priority into the all priorities property and get the proper priority
+        let priorityIndex = priorityControl.selectedSegmentIndex
+        let priority = TaskPriority.allPriorities[priorityIndex]
         
         let notes = notesTextView.text
         
         if let task = task {
             // Editing an existing task, changed the task in our MOC interface as well.
             task.name = name
+            task.priority = priority.rawValue
             task.notes = notes
         } else {
             // Creating a new task, and put it in our managed object context!
-            let _ = Task(name: name, notes: notes)
+            let _ = Task(name: name, priority: priority, notes: notes)
         }
         
         do {
             let moc = CoreDataStack.shared.mainContext
             try moc.save()
         } catch {
-            print("Error savaing managed object context: \(error)")
+            print("Error saving managed object context: \(error)")
         }
         
         navigationController?.popViewController(animated: true)
@@ -59,6 +64,16 @@ class TaskDetailViewController: UIViewController {
         
         title = task?.name ?? "Create Task"
         nameTextField.text = task?.name
+        
+        let priority: TaskPriority
+        if let taskPriority = task?.priority {
+            priority = TaskPriority(rawValue: taskPriority)!
+        } else {
+            priority = .normal
+        }
+        
+        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
+        
         notesTextView.text = task?.notes
     }
     

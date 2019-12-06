@@ -3,8 +3,9 @@
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" minValueString="1"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="priority" attributeType="String" defaultValueString="normal"/>
     </entity>
     <elements>
-        <element name="Task" positionX="-8158.375" positionY="-3941.390625" width="128" height="73"/>
+        <element name="Task" positionX="-9820.64453125" positionY="-7941.60546875" width="128" height="88"/>
     </elements>
 </model>
