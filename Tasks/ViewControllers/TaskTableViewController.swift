@@ -32,7 +32,7 @@ class TaskTableViewController: UITableViewController {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         //must have SORT DESCRIPTORS. this is where we start to make things conform for sections
         fetchRequest.sortDescriptors = [
-        NSSortDescriptor(key: "priority", ascending: true),
+        NSSortDescriptor(key: "priority", ascending: false),
         NSSortDescriptor(key: "name", ascending: true)
         ]
         let moc = CoreDataStack.shared.mainContext
